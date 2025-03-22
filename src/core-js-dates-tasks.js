@@ -236,13 +236,11 @@ function getNextFridayThe13th(date) {
 
   clonedDate.setDate(clonedDate.getDate() + 1);
 
-  while (true) {
-    if (clonedDate.getDate() === 13 && clonedDate.getDay() === 5) {
-      return clonedDate;
-    }
-
+  while (clonedDate.getDate() !== 13 || clonedDate.getDay() !== 5) {
     clonedDate.setDate(clonedDate.getDate() + 1);
   }
+
+  return clonedDate;
 }
 
 /**
